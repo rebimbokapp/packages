@@ -1,0 +1,10 @@
+{
+  "exclude": ["prisma"],
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declarationDir": "typings",
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true
+  }
+}

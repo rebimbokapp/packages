@@ -2,3 +2,6 @@ node_modules
 dist
 typings
 *.js
+packages/database/prisma/pg/generated
+packages/database/prisma/mongo/generated
+packages/protos/src/protos/generated

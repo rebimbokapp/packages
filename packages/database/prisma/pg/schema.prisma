@@ -1,0 +1,180 @@
+generator client {
+  provider      = "prisma-client-js"
+  output        = "generated"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  USER
+  MECHANIC
+  DEVELOPER
+  ADMIN
+}
+
+enum UserGender {
+  MALE
+  FEMALE
+}
+
+model User {
+  id            String         @id
+  email         String         @unique
+  password      String
+  full_name     String
+  role          UserRole
+  birthdate     String?
+  avatar        String?
+  document      String?
+  phone         String?
+  mobile_phone  String?
+  gender        UserGender?
+  address_id    String?
+  address       Address?       @relation(fields: [address_id], references: [id])
+  audit_trails  AuditTrail[]
+  workshops     Workshop[]
+  solicitations Solicitation[]
+  created_at    DateTime       @default(now())
+  updated_at    DateTime       @default(now()) @updatedAt
+
+  @@map("users")
+}
+
+model Address {
+  id           String     @id
+  city         String
+  state        String
+  number       Int
+  street       String
+  zip_code     Int
+  complement   String?
+  neighborhood String
+  users        User[]
+  workshops    Workshop[]
+  created_at   DateTime   @default(now())
+  updated_at   DateTime   @default(now()) @updatedAt
+
+  @@map("adresses")
+}
+
+enum WorkshopCategory {
+  MOTORCYCLE
+  CAR
+  GENERAL
+  PARTS_DISTRIBUTOR
+  HEAVY_VEHICLES
+}
+
+model Workshop {
+  id              String           @id
+  corporate_name  String
+  fantasy_name    String
+  comercial_email String
+  phone           String
+  mobile_phone    String
+  cnpj            String
+  category        WorkshopCategory
+  user_id         String
+  user            User             @relation(fields: [user_id], references: [id])
+  address_id      String
+  address         Address          @relation(fields: [address_id], references: [id])
+  bugets          Budget[]
+  created_at      DateTime         @default(now())
+  updated_at      DateTime         @default(now()) @updatedAt
+
+  @@map("workshops")
+}
+
+enum BudgetStatus {
+  OPEN
+  CLOSED
+}
+
+model Budget {
+  id                     String       @id
+  price                  Decimal
+  delivery_time_in_hours String
+  delivery_rrice         Decimal
+  details                String
+  status                 BudgetStatus
+  channel_id             String
+  workshop_id            String
+  workshop               Workshop     @relation(fields: [workshop_id], references: [id])
+  created_at             DateTime     @default(now())
+  updated_at             DateTime     @default(now()) @updatedAt
+
+  @@map("budgets")
+}
+
+enum SolicitationPieceState {
+  NEW
+  USED
+  OLD
+  SEMINEW
+}
+
+enum SolicitationVehicle {
+  MOTORCYCLE
+  CAR
+  HEAVY_VEHICLES
+}
+
+model Solicitation {
+  id          String                 @id
+  piece_state SolicitationPieceState
+  vehicle     SolicitationVehicle
+  brand       String
+  model       String
+  year        String
+  color       String
+  description String
+  user_id     String
+  user        User                   @relation(fields: [user_id], references: [id])
+  created_at  DateTime               @default(now())
+  updated_at  DateTime               @default(now()) @updatedAt
+
+  @@map("solicitations")
+}
+
+model Offer {
+  id          String   @id
+  title       String
+  description String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @default(now()) @updatedAt
+
+  @@map("offers")
+}
+
+model RefreshToken {
+  id         String   @id
+  subject_id String
+  token      String
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  @@map("refresh_tokens")
+}
+
+model AuditTrail {
+  id                String   @id
+  device_model      String
+  ip                String
+  browser           String
+  timestamp         String
+  url               String
+  user_id           String
+  user              User     @relation(fields: [user_id], references: [id])
+  http_status_code  String
+  request_duration  String
+  operating_system  String
+  screen_resolution String
+  created_at        DateTime @default(now())
+  updated_at        DateTime @default(now()) @updatedAt
+
+  @@map("audit_trails")
+}

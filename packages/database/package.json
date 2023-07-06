@@ -1,0 +1,53 @@
+{
+  "name": "@hitechline/rebimboka-database",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "typings/index.d.ts",
+  "exports": {
+    "./prisma/pg": "./dist/prisma/pg/index.js",
+    "./prisma/mongo": "./dist/prisma/mongo/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "prisma/pg": [
+        "typings/prisma/pg/index.d.ts"
+      ],
+      "prisma/mongo": [
+        "typings/prisma/mongo/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "prisma",
+    "typings",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "directory": "packages/database",
+    "url": "git+https://github.com/hitechline/hitl-rbk-packages.git"
+  },
+  "scripts": {
+    "prepare": "run-s \"generate:{pg,mongo}\"",
+    "clean": "rimraf dist prisma/pg/generated prisma/mongo/generated typings",
+    "migrate:pg:dev": "npx prisma migrate dev --schema prisma/pg/schema.prisma",
+    "migrate:mongo:dev": "npx prisma migrate dev --schema prisma/mongo/schema.prisma",
+    "migrate:pg:prod": "npx prisma migrate deploy --schema prisma/pg/schema.prisma",
+    "migrate:mongo:prod": "npx prisma migrate deploy --schema prisma/mongo/schema.prisma",
+    "studio": "npx prisma studio",
+    "generate:pg": "npx prisma generate --schema prisma/pg/schema.prisma",
+    "generate:mongo": "npx prisma generate --schema prisma/mongo/schema.prisma",
+    "build": "run-s clean \"generate:{pg,mongo}\" \"build:{types,files}\"",
+    "build:types": "tsc --project tsconfig.types.json",
+    "build:files": "node esbuild.config.js"
+  },
+  "dependencies": {
+    "@prisma/client": "4.15.0"
+  },
+  "devDependencies": {
+    "prisma": "4.15.0"
+  }
+}

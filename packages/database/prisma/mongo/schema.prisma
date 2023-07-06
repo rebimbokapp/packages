@@ -1,0 +1,54 @@
+generator client {
+  provider      = "prisma-client-js"
+  output        = "generated"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum ChannelStatus {
+  OPEN
+  CLOSED
+}
+
+model Channel {
+  id              String        @id @map("_id") @db.String
+  user_id         String
+  solicitation_id String
+  workshop_id     String
+  budget_id       String
+  status          ChannelStatus
+  messages        Message[]
+  created_at      DateTime      @default(now())
+  updated_at      DateTime      @default(now()) @updatedAt
+
+  @@map("channels")
+}
+
+model Message {
+  id         String    @id @map("_id") @db.String
+  content    String
+  channel_id String    @db.String
+  channel    Channel   @relation(fields: [channel_id], references: [id])
+  user_id    String    @db.String
+  user       User      @relation(fields: [user_id], references: [id])
+  read_at    DateTime?
+  created_at DateTime  @default(now())
+  updated_at DateTime  @default(now()) @updatedAt
+
+  @@map("messages")
+}
+
+model User {
+  id         String    @id @map("_id") @db.String
+  full_name  String
+  avatar     String
+  messages   Message[]
+  created_at DateTime  @default(now())
+  updated_at DateTime  @default(now()) @updatedAt
+
+  @@map("users")
+}
