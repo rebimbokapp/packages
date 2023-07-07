@@ -96,14 +96,16 @@ enum BudgetStatus {
 
 model Budget {
   id                     String       @id
-  price                  Decimal
-  delivery_time_in_hours String
-  delivery_rrice         Decimal
+  price                  Int
+  delivery_time_in_hours Int
+  delivery_price         Int
   details                String
-  status                 BudgetStatus
+  status                 BudgetStatus @default(OPEN)
   channel_id             String
   workshop_id            String
   workshop               Workshop     @relation(fields: [workshop_id], references: [id])
+  solicitation_id        String
+  solicitation           Solicitation @relation(fields: [solicitation_id], references: [id])
   created_at             DateTime     @default(now())
   updated_at             DateTime     @default(now()) @updatedAt
 
@@ -134,6 +136,7 @@ model Solicitation {
   description String
   user_id     String
   user        User                   @relation(fields: [user_id], references: [id])
+  budgets     Budget[]
   created_at  DateTime               @default(now())
   updated_at  DateTime               @default(now()) @updatedAt
 
