@@ -1,4 +1,5 @@
 const { resolve } = require('path');
+
 const { build } = require('esbuild');
 const fastGlob = require('fast-glob');
 

@@ -4,8 +4,8 @@
 
 export {
   Prisma as PrismaMongo,
-  type Channel,
+  Channel,
   ChannelStatus,
-  type Message,
-  type User,
+  Message,
+  User,
 } from '../../../prisma/mongo/generated';
