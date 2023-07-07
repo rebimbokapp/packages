@@ -14,3 +14,6 @@ export * from './WorkshopCorporateNameAlreadyExistsError';
 export * from './UserCannotChangeRoleError';
 export * from './OfferNotFoundError';
 export * from './RefreshTokenNotFoundError';
+export * from './SolicitationNotFoundError';
+export * from './UserCannotBeMechanicError';
+export * from './BudgetNotFoundError';
