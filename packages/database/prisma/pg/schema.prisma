@@ -50,7 +50,7 @@ model Address {
   state        String
   number       Int
   street       String
-  zip_code     Int
+  zip_code     String
   complement   String?
   neighborhood String
   users        User[]
