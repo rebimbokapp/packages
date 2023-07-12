@@ -2,7 +2,7 @@
 
 // @ts-ignore
 
-import { PrismaClient } from '../../../prisma/pg/generated';
+import { PrismaClient } from '../../../prisma/postgres/generated';
 import { createMongoUrl } from '../../utils/url';
 
 export interface PrismaMongoOptions {

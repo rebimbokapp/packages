@@ -2,10 +2,10 @@
 
 // @ts-ignore
 
-import { PrismaClient } from '../../../prisma/pg/generated';
+import { PrismaClient } from '../../../prisma/postgres/generated';
 import { createPostgresUrl } from '../../utils/url';
 
-export interface PrismaPgOptions {
+export interface PrismaPostgresOptions {
   host: string;
   port: number;
   database: string;
@@ -14,8 +14,8 @@ export interface PrismaPgOptions {
   schema?: string;
 }
 
-export class PrismaPgClient extends PrismaClient {
-  constructor(options: PrismaPgOptions) {
+export class PrismaPostgresClient extends PrismaClient {
+  constructor(options: PrismaPostgresOptions) {
     const { host, port, database, username, password, schema } = options;
 
     const url = createPostgresUrl(

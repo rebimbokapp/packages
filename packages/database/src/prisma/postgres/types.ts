@@ -3,7 +3,7 @@
 // @ts-nocheck
 
 export {
-  Prisma as PrismaPg,
+  Prisma as PrismaPostgres,
   Address,
   AuditTrail,
   Budget,
@@ -18,4 +18,4 @@ export {
   UserRole,
   Workshop,
   WorkshopCategory,
-} from '../../../prisma/pg/generated';
+} from '../../../prisma/postgres/generated';
