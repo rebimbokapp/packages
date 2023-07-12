@@ -17,3 +17,4 @@ export * from './RefreshTokenNotFoundError';
 export * from './SolicitationNotFoundError';
 export * from './UserCannotBeMechanicError';
 export * from './BudgetNotFoundError';
+export * from './UserInvalidEmailOrPasswordError';
