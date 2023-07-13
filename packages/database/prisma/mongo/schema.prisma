@@ -54,13 +54,14 @@ model User {
 }
 
 model Notification {
-  id          String   @id @map("_id") @db.String
+  id          String    @id @map("_id") @db.String
   title       String
   action      String
   description String
   user_id     String
-  created_at  DateTime @default(now())
-  updated_at  DateTime @default(now()) @updatedAt
+  read_at     DateTime?
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @default(now()) @updatedAt
 
   @@map("notifications")
 }
