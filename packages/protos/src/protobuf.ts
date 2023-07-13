@@ -7,7 +7,7 @@ export * from './protos/generated/chat';
 export * from './protos/generated/chat.server';
 export * from './protos/generated/chat.client';
 
-// Cdn
+// CDN
 export * from './protos/generated/cdn';
 export * from './protos/generated/cdn.server';
 export * from './protos/generated/cdn.client';

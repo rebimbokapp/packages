@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package common;
 
-message ChatChannel {
+message Channel {
   required string id = 1;
   required string user_id = 2;
   required string solicitation_id = 3;
@@ -11,4 +11,14 @@ message ChatChannel {
   required string status = 6;
   required string created_at = 7;
   required string updated_at = 8;
+}
+
+message Notification {
+  required string id = 1;
+  required string title = 2;
+  required string action = 3;
+  required string description = 4;
+  required string user_id = 5;
+  required string created_at = 6;
+  required string updated_at = 7;
 }

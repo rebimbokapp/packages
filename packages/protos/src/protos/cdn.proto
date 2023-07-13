@@ -1,3 +1,20 @@
 syntax = "proto2";
 
 package cdn;
+
+service CDNService {
+  rpc UploadImage (UploadImageRequest) returns (UploadImageResponse);
+}
+
+message UploadImageRequest {
+  required string name = 1;
+  required uint32 size = 2;
+  required string type = 3;
+  required bytes chunk = 5;
+}
+
+message UploadImageResponse {
+  required string id = 1;
+  required uint32 size = 2;
+  required string url = 3;
+}

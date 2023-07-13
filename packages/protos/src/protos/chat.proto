@@ -6,7 +6,7 @@ import "common.proto";
 
 service ChatService {
   rpc CreateChannel (CreateChannelRequest) returns (CreateChannelResponse);
-  rpc GetChannel (GetChannelRequest) returns (GetChannelResponse);
+  rpc GetChannelById (GetChannelRequest) returns (GetChannelResponse);
 }
 
 message CreateChannelRequest {
@@ -17,7 +17,7 @@ message CreateChannelRequest {
 }
 
 message CreateChannelResponse {
-  required common.ChatChannel channel = 1;
+  required common.Channel channel = 1;
 }
 
 message GetChannelRequest {
@@ -25,5 +25,5 @@ message GetChannelRequest {
 }
 
 message GetChannelResponse {
-  required common.ChatChannel channel = 1;
+  required common.Channel channel = 1;
 }
