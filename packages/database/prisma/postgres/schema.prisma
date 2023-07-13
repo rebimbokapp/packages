@@ -187,7 +187,7 @@ model Validation {
   type                       String
   validation                 String
   subject                    String
-  expiration_time_in_minutes String
+  expiration_time_in_minutes Int
   created_at                 DateTime @default(now())
   updated_at                 DateTime @default(now()) @updatedAt
 

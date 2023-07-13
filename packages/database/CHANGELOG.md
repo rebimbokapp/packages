@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.3.0...@hitechline/rebimboka-database@0.3.1) (2023-07-13)
+
+### Bug Fixes
+
+- **database:** update expiration time in minutes field to int ([135241d](https://github.com/hitechline/hitl-rbk-packages/commit/135241d9fba80aba6ba8aa131604f8c89da52cba))
+
+# [0.3.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.2.1...@hitechline/rebimboka-database@0.3.0) (2023-07-13)
+
+### Features
+
+- **database:** create validations ([0f58001](https://github.com/hitechline/hitl-rbk-packages/commit/0f58001cd9c1fe8076a4266d9e6564cd030ca2b0))
+
+## [0.2.1](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.2.0...@hitechline/rebimboka-database@0.2.1) (2023-07-13)
+
+### Bug Fixes
+
+- **database:** update prisma client ([851a140](https://github.com/hitechline/hitl-rbk-packages/commit/851a140c1d063fe01c52109f4e19f5e1dfa6400f))
+
 # [0.2.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.1.1...@hitechline/rebimboka-database@0.2.0) (2023-07-13)
 
 ### Features
