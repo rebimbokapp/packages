@@ -6,9 +6,9 @@ Bibliotecas utilizadas para o desenvolvimento de front-end e back-end.
 
 Disponíveis no [Github NPM Registry](https://github.com/orgs/hitechline/packages?repo_name=hitl-rbk-packages).
 
-- [@hitechline/rebimboka-database](https://github.com/hitechline/hitl-rbk-packages/blob/develop/packages/database/README.md)
-- [@hitechline/rebimboka-errors](https://github.com/hitechline/hitl-rbk-packages/blob/develop/packages/errors/README.md)
-- [@hitechline/rebimboka-protos](https://github.com/hitechline/hitl-rbk-packages/blob/develop/packages/protos/README.md)
+- [@hitechline/rebimboka-database](https://github.com/hitechline/hitl-rbk-packages/blob/develop/packages/database)
+- [@hitechline/rebimboka-errors](https://github.com/hitechline/hitl-rbk-packages/blob/develop/packages/errors)
+- [@hitechline/rebimboka-protos](https://github.com/hitechline/hitl-rbk-packages/blob/develop/packages/protos)
 
 ## Configuração de ambiente
 
