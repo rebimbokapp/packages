@@ -181,3 +181,15 @@ model AuditTrail {
 
   @@map("audit_trails")
 }
+
+model Validation {
+  id                         String   @id
+  type                       String
+  validation                 String
+  subject                    String
+  expiration_time_in_minutes String
+  created_at                 DateTime @default(now())
+  updated_at                 DateTime @default(now()) @updatedAt
+
+  @@map("validations")
+}
