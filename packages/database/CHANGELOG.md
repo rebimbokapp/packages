@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.4.0...@hitechline/rebimboka-database@0.5.0) (2023-07-13)
+
+### Features
+
+- add read_at field ([54c9a96](https://github.com/hitechline/hitl-rbk-packages/commit/54c9a96b4836268590a5a5399c2749b59af6b75c))
+
 # [0.4.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.3.2...@hitechline/rebimboka-database@0.4.0) (2023-07-13)
 
 ### Features
