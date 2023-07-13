@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.2.0...@hitechline/rebimboka-database@0.2.1) (2023-07-13)
+
+### Bug Fixes
+
+- **database:** update prisma client ([851a140](https://github.com/hitechline/hitl-rbk-packages/commit/851a140c1d063fe01c52109f4e19f5e1dfa6400f))
+
 # [0.2.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.1.1...@hitechline/rebimboka-database@0.2.0) (2023-07-13)
 
 ### Features
