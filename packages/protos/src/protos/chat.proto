@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+package chat;
+
+import "common.proto";
+
+service ChatService {
+  rpc CreateChannel (CreateChannelRequest) returns (CreateChannelResponse);
+  rpc GetChannel (GetChannelRequest) returns (GetChannelResponse);
+}
+
+message CreateChannelRequest {
+  required string user_id = 1;
+  required string solicitation_id = 2;
+  required string workshop_id = 3;
+  required string budget_id = 4;
+}
+
+message CreateChannelResponse {
+  required common.ChatChannel channel = 1;
+}
+
+message GetChannelRequest {
+  required string channel_id = 1;
+}
+
+message GetChannelResponse {
+  required common.ChatChannel channel = 1;
+}

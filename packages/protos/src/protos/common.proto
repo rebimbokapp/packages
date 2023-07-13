@@ -1,3 +1,14 @@
 syntax = "proto2";
 
 package common;
+
+message ChatChannel {
+  required string id = 1;
+  required string user_id = 2;
+  required string solicitation_id = 3;
+  required string workshop_id = 4;
+  required string budget_id = 5;
+  required string status = 6;
+  required string created_at = 7;
+  required string updated_at = 8;
+}
