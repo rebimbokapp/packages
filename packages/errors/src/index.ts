@@ -19,3 +19,4 @@ export * from './UserCannotBeMechanicError';
 export * from './BudgetNotFoundError';
 export * from './UserInvalidEmailOrPasswordError';
 export * from './RouteNotFoundError';
+export * from './ValidationNotFoundError';
