@@ -18,4 +18,5 @@ export {
   UserRole,
   Workshop,
   WorkshopCategory,
+  Validation,
 } from '../../../prisma/postgres/generated';
