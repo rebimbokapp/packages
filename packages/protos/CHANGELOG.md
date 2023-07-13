@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.2.0...@hitechline/rebimboka-protos@0.3.0) (2023-07-13)
+
+### Features
+
+- create chat, cdn and notification protos ([35fc55b](https://github.com/hitechline/hitl-rbk-packages/commit/35fc55b15c02834bc4476fb15e9d272b82beeb23))
+
 # [0.2.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.1.0...@hitechline/rebimboka-protos@0.2.0) (2023-07-13)
 
 ### Features
