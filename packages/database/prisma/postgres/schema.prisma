@@ -40,6 +40,7 @@ model User {
   solicitations          Solicitation[]
   rejected_solicitations Solicitation[] @relation("rejected_solicitations")
   accepted_solicitations Solicitation[] @relation("accepted_solicitations")
+  closed_solicitations   Solicitation[] @relation("closed_solicitations")
   created_at             DateTime       @default(now())
   updated_at             DateTime       @default(now()) @updatedAt
 
@@ -110,6 +111,7 @@ model Budget {
 enum SolicitationStatus {
   PENDING
   ACCEPTED
+  CLOSED
 }
 
 enum SolicitationPieceState {
@@ -140,6 +142,7 @@ model Solicitation {
   user           User                   @relation(fields: [user_id], references: [id])
   users_reject   User[]                 @relation("rejected_solicitations")
   users_accepted User[]                 @relation("accepted_solicitations")
+  users_closed   User[]                 @relation("closed_solicitations")
   budgets        Budget[]
   created_at     DateTime               @default(now())
   updated_at     DateTime               @default(now()) @updatedAt
