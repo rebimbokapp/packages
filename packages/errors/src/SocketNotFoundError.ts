@@ -2,11 +2,11 @@ import { StatusCodes } from 'http-status-codes';
 
 import { ErrorBase } from './ErrorBase';
 
-export class UserCannotBeMechanicError extends ErrorBase {
+export class SocketNotFoundError extends ErrorBase {
   constructor() {
     super({
-      message: 'User cannot be mechanic.',
-      code: 'UserCannotBeMechanicError',
+      message: 'Socket does not exists.',
+      code: 'SocketNotFoundError',
       status: StatusCodes.BAD_REQUEST,
     });
   }
