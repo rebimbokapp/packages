@@ -36,7 +36,7 @@
     "protocVersion": "3.11.0"
   },
   "scripts": {
-    "prepare": "yarn build:protos",
+    "prepare": "npm run build:protos",
     "clean": "rimraf dist typings",
     "build": "run-s clean \"build:{protos,types,files}\"",
     "build:protos": "node scripts/build-protos.js",

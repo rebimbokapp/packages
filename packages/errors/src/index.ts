@@ -8,6 +8,7 @@ export * from './JWTTokenInvalidError';
 export * from './RouteNotFoundError';
 export * from './ValidationNotFoundError';
 export * from './PaginationError';
+export * from './BadRequestError';
 
 export * from './UserEmailAlreadyExistsError';
 export * from './UserNotFoundError';
