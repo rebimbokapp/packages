@@ -7,7 +7,7 @@ export class RouteNotFoundError extends ErrorBase {
     super({
       message: 'Route does not exists.',
       code: 'RouteNotFoundError',
-      status: StatusCodes.BAD_REQUEST,
+      status: StatusCodes.NOT_FOUND,
     });
   }
 }
