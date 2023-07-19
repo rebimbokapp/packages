@@ -14,11 +14,11 @@
     "node": ">=14"
   },
   "scripts": {
-    "fix": "npm run format:fix && npm run lint:fix",
     "lint": "eslint ./ --ext \"js,jsx,ts,tsx\"",
     "lint:fix": "eslint ./ --ext \"js,jsx,ts,tsx\" --fix",
     "format": "prettier --check \"./**/*.{js,jsx,ts,tsx}\"",
     "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
+    "fix": "run-s format:fix lint:fix",
     "build:all": "nx run-many --target=build",
     "build:since": "nx affected --target=build",
     "version": "lerna version --yes --conventional-commits --create-release github",

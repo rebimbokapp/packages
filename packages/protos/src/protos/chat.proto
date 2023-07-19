@@ -6,24 +6,62 @@ import "common.proto";
 
 service ChatService {
   rpc CreateChannel (CreateChannelRequest) returns (CreateChannelResponse);
-  rpc GetChannelById (GetChannelRequest) returns (GetChannelResponse);
+  rpc GetChannelById (GetChannelByIdRequest) returns (GetChannelByIdResponse);
+  rpc JoinInChannelById (JoinInChannelByIdRequest) returns (JoinInChannelByIdResponse);
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+  rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse);
+  rpc UpdateUserById (UpdateUserByIdRequest) returns (UpdateUserByIdResponse);
 }
 
 message CreateChannelRequest {
-  required string user_id = 1;
   required string solicitation_id = 2;
-  required string workshop_id = 3;
-  required string budget_id = 4;
 }
 
 message CreateChannelResponse {
   required common.Channel channel = 1;
 }
 
-message GetChannelRequest {
+message GetChannelByIdRequest {
   required string channel_id = 1;
 }
 
-message GetChannelResponse {
+message GetChannelByIdResponse {
   required common.Channel channel = 1;
+}
+
+message JoinInChannelByIdRequest {
+  required string channel_id = 1;
+  required string user_id = 2;
+}
+
+message JoinInChannelByIdResponse {
+  required common.Channel channel = 1;
+}
+
+message CreateUserRequest {
+  required string id = 1;
+  required string full_name = 2;
+  optional string avatar = 3;
+}
+
+message CreateUserResponse {
+  required common.User user = 1;
+}
+
+message GetUserByIdRequest {
+  required string user_id = 1;
+}
+
+message GetUserByIdResponse {
+  required common.User user = 1;
+}
+
+message UpdateUserByIdRequest {
+  required string user_id = 1;
+  required string full_name = 2;
+  optional string avatar = 3;
+}
+
+message UpdateUserByIdResponse {
+  required common.User user = 1;
 }
