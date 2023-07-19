@@ -19,6 +19,7 @@ export * from './UserRoleMustBeUserError';
 export * from './UserCannotChangeRoleError';
 export * from './UserAlreadyJoinInChannelError';
 export * from './UserAlreadyExistsError';
+export * from './UserMustBeHaveRegisteredWorkshop';
 
 export * from './WorkshopNotFoundError';
 export * from './WorkshopCorporateNameAlreadyExistsError';
@@ -30,8 +31,10 @@ export * from './RefreshTokenNotFoundError';
 export * from './BudgetNotFoundError';
 
 export * from './SolicitationNotFoundError';
+export * from './SolicitationCannotBeClosedError';
 export * from './SolicitationAlreadyAcceptedError';
 export * from './SolicitationAlreadyRejectedError';
+export * from './SolicitationAlreadyClosedError';
 
 export * from './MessageNotFoundError';
 
