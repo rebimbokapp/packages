@@ -32,7 +32,7 @@
   },
   "scripts": {
     "prepare": "run-s \"generate:{postgres,mongo}\"",
-    "clean": "rimraf dist prisma/postgres/generated prisma/mongo/generated typings",
+    "clean": "rimraf dist typings prisma/postgres/generated prisma/mongo/generated",
     "migrate:dev:postgres": "npx prisma migrate dev --schema prisma/postgres/schema.prisma",
     "migrate:prod:postgres": "npx prisma migrate deploy --schema prisma/postgres/schema.prisma",
     "db:push:mongo": "npx prisma db push --schema prisma/mongo/schema.prisma",
