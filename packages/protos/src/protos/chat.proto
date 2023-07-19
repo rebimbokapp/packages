@@ -8,6 +8,7 @@ service ChatService {
   rpc CreateChannel (CreateChannelRequest) returns (CreateChannelResponse);
   rpc GetChannelById (GetChannelByIdRequest) returns (GetChannelByIdResponse);
   rpc JoinInChannelById (JoinInChannelByIdRequest) returns (JoinInChannelByIdResponse);
+  rpc CloseChannelById (CloseChannelByIdRequest) returns (CloseChannelByIdResponse);
   rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
   rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdResponse);
   rpc UpdateUserById (UpdateUserByIdRequest) returns (UpdateUserByIdResponse);
@@ -35,6 +36,14 @@ message JoinInChannelByIdRequest {
 }
 
 message JoinInChannelByIdResponse {
+  required common.Channel channel = 1;
+}
+
+message CloseChannelByIdRequest {
+  required string channel_id = 1;
+}
+
+message CloseChannelByIdResponse {
   required common.Channel channel = 1;
 }
 
