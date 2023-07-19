@@ -10,6 +10,7 @@ build({
   outdir: 'dist',
   format: 'cjs',
   target: 'es2020',
+  logLevel: 'info',
   tsconfig: 'tsconfig.json',
   absWorkingDir: BASE_PATH,
   minify: true,

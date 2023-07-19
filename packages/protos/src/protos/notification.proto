@@ -6,8 +6,6 @@ import "common.proto";
 
 service NotificationService {
   rpc CreateNotification (CreateNotificationRequest) returns (CreateNotificationResponse);
-  rpc GetNotificationById (GetNotificationByIdRequest) returns (GetNotificationByIdResponse);
-  rpc GetAllNotificationsByUserId (GetAllNotificationsByUserIdRequest) returns (GetAllNotificationsByUserIdResponse);
 }
 
 message CreateNotificationRequest {
@@ -18,21 +16,5 @@ message CreateNotificationRequest {
 }
 
 message CreateNotificationResponse {
-  required common.Notification notification = 1;
-}
-
-message GetNotificationByIdRequest {
-  required string notification_id = 1;
-}
-
-message GetNotificationByIdResponse {
-  required common.Notification notification = 1;
-}
-
-message GetAllNotificationsByUserIdRequest {
-  required string user_id = 1;
-}
-
-message GetAllNotificationsByUserIdResponse {
   required common.Notification notification = 1;
 }

@@ -22,24 +22,26 @@ enum UserGender {
 }
 
 model User {
-  id            String         @id
-  email         String         @unique
-  password      String
-  full_name     String
-  role          UserRole
-  birthdate     String?
-  avatar        String?
-  document      String?
-  phone         String?
-  mobile_phone  String?
-  gender        UserGender?
-  address_id    String?
-  address       Address?       @relation(fields: [address_id], references: [id])
-  audit_trails  AuditTrail[]
-  workshops     Workshop[]
-  solicitations Solicitation[]
-  created_at    DateTime       @default(now())
-  updated_at    DateTime       @default(now()) @updatedAt
+  id                     String         @id
+  email                  String         @unique
+  password               String
+  full_name              String
+  role                   UserRole
+  birthdate              String?
+  avatar                 String?
+  document               String?
+  phone                  String?
+  mobile_phone           String?
+  gender                 UserGender?
+  address_id             String?
+  address                Address?       @relation(fields: [address_id], references: [id])
+  audit_trails           AuditTrail[]
+  workshops              Workshop[]
+  solicitations          Solicitation[]
+  rejected_solicitations Solicitation[] @relation("rejected_solicitations")
+  accepted_solicitations Solicitation[] @relation("accepted_solicitations")
+  created_at             DateTime       @default(now())
+  updated_at             DateTime       @default(now()) @updatedAt
 
   @@map("users")
 }
@@ -89,19 +91,12 @@ model Workshop {
   @@map("workshops")
 }
 
-enum BudgetStatus {
-  OPEN
-  CLOSED
-}
-
 model Budget {
   id                     String       @id
   price                  Int
   delivery_time_in_hours Int
   delivery_price         Int
   details                String
-  status                 BudgetStatus @default(OPEN)
-  channel_id             String
   workshop_id            String
   workshop               Workshop     @relation(fields: [workshop_id], references: [id])
   solicitation_id        String
@@ -110,6 +105,11 @@ model Budget {
   updated_at             DateTime     @default(now()) @updatedAt
 
   @@map("budgets")
+}
+
+enum SolicitationStatus {
+  PENDING
+  ACCEPTED
 }
 
 enum SolicitationPieceState {
@@ -126,19 +126,23 @@ enum SolicitationVehicle {
 }
 
 model Solicitation {
-  id          String                 @id
-  piece_state SolicitationPieceState
-  vehicle     SolicitationVehicle
-  brand       String
-  model       String
-  year        String
-  color       String
-  description String
-  user_id     String
-  user        User                   @relation(fields: [user_id], references: [id])
-  budgets     Budget[]
-  created_at  DateTime               @default(now())
-  updated_at  DateTime               @default(now()) @updatedAt
+  id             String                 @id
+  status         SolicitationStatus     @default(PENDING)
+  piece_state    SolicitationPieceState
+  vehicle        SolicitationVehicle
+  brand          String
+  model          String
+  year           String
+  color          String
+  description    String
+  channel_id     String?
+  user_id        String
+  user           User                   @relation(fields: [user_id], references: [id])
+  users_reject   User[]                 @relation("rejected_solicitations")
+  users_accepted User[]                 @relation("accepted_solicitations")
+  budgets        Budget[]
+  created_at     DateTime               @default(now())
+  updated_at     DateTime               @default(now()) @updatedAt
 
   @@map("solicitations")
 }

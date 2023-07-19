@@ -15,15 +15,13 @@ enum ChannelStatus {
 }
 
 model Channel {
-  id              String        @id @map("_id") @db.String
-  user_id         String
+  id              String          @id @map("_id") @db.String
   solicitation_id String
-  workshop_id     String
-  budget_id       String
-  status          ChannelStatus
+  status          ChannelStatus   @default(OPEN)
   messages        Message[]
-  created_at      DateTime      @default(now())
-  updated_at      DateTime      @default(now()) @updatedAt
+  users           UserOnChannel[]
+  created_at      DateTime        @default(now())
+  updated_at      DateTime        @default(now()) @updatedAt
 
   @@map("channels")
 }
@@ -43,14 +41,25 @@ model Message {
 }
 
 model User {
-  id         String    @id @map("_id") @db.String
+  id         String          @id @map("_id") @db.String
   full_name  String
-  avatar     String
+  avatar     String?
   messages   Message[]
-  created_at DateTime  @default(now())
-  updated_at DateTime  @default(now()) @updatedAt
+  channels   UserOnChannel[]
+  created_at DateTime        @default(now())
+  updated_at DateTime        @default(now()) @updatedAt
 
   @@map("users")
+}
+
+model UserOnChannel {
+  id         String  @id @map("_id") @db.String
+  user_id    String  @db.String
+  user       User    @relation(fields: [user_id], references: [id])
+  channel_id String  @db.String
+  channel    Channel @relation(fields: [channel_id], references: [id])
+
+  @@map("users_channels")
 }
 
 model Notification {
