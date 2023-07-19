@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.4.0...@hitechline/rebimboka-protos@0.5.0) (2023-07-19)
+
+### Features
+
+- create close channel grpc service ([c251198](https://github.com/hitechline/hitl-rbk-packages/commit/c251198f128b5745dfbe79e5e24420ce464c83c3))
+
 # [0.4.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.3.0...@hitechline/rebimboka-protos@0.4.0) (2023-07-19)
 
 ### Features

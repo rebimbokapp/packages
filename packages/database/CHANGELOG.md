@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.6.1...@hitechline/rebimboka-database@0.7.0) (2023-07-19)
+
+### Features
+
+- create closed solicitations ([33657d2](https://github.com/hitechline/hitl-rbk-packages/commit/33657d29d36bd7df2e92f191e7db63cfce114b94))
+
 ## [0.6.1](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.6.0...@hitechline/rebimboka-database@0.6.1) (2023-07-19)
 
 ### Bug Fixes
