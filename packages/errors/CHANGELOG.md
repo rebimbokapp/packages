@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-errors@0.3.0...@hitechline/rebimboka-errors@0.4.0) (2023-07-19)
+
+### Features
+
+- create channel and solicitation errors ([eee40e7](https://github.com/hitechline/hitl-rbk-packages/commit/eee40e75b4ad76c971be933e7ceeee2211f19ad0))
+
 # [0.3.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-errors@0.2.1...@hitechline/rebimboka-errors@0.3.0) (2023-07-13)
 
 ### Features

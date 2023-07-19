@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.5.0...@hitechline/rebimboka-database@0.6.0) (2023-07-19)
+
+### Features
+
+- create join in channel model ([dea3e0f](https://github.com/hitechline/hitl-rbk-packages/commit/dea3e0f8f72fc1a4df3af96709f08e2ccfc79762))
+- create reject and accept solicitations table ([475dfcc](https://github.com/hitechline/hitl-rbk-packages/commit/475dfcccadd320e3645afe0cfd8dadcb7d0d4aff))
+
 # [0.5.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.4.0...@hitechline/rebimboka-database@0.5.0) (2023-07-13)
 
 ### Features
