@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.6.0...@hitechline/rebimboka-database@0.6.1) (2023-07-19)
+
+### Bug Fixes
+
+- **prisma:** add binary target linux musl ([dff148f](https://github.com/hitechline/hitl-rbk-packages/commit/dff148f6a734ec1b6468aae6bda76623367dcac4))
+
 # [0.6.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.5.0...@hitechline/rebimboka-database@0.6.0) (2023-07-19)
 
 ### Features
