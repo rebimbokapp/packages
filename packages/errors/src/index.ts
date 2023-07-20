@@ -42,3 +42,6 @@ export * from './ChannelNotFoundError';
 export * from './ChannelClosedError';
 
 export * from './SocketNotFoundError';
+
+export * from './ImageNotFoundError';
+export * from './ImageTypeNotAllowedError';
