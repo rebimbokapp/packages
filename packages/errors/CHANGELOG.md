@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-errors@0.5.0...@hitechline/rebimboka-errors@0.6.0) (2023-07-20)
+
+### Features
+
+- create image errors ([1aa10d6](https://github.com/hitechline/hitl-rbk-packages/commit/1aa10d61eba6b7afbba18ea8ae2a04d8c359c763))
+
 # [0.5.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-errors@0.4.1...@hitechline/rebimboka-errors@0.5.0) (2023-07-19)
 
 ### Features

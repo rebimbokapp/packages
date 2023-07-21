@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.5.1...@hitechline/rebimboka-protos@0.6.0) (2023-07-21)
+
+### Features
+
+- return the uploaded image ([a35123b](https://github.com/hitechline/hitl-rbk-packages/commit/a35123bbc7e0b9bfb84dc945e0ee1ab3968529f4))
+
+## [0.5.1](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.5.0...@hitechline/rebimboka-protos@0.5.1) (2023-07-20)
+
+**Note:** Version bump only for package @hitechline/rebimboka-protos
+
 # [0.5.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.4.0...@hitechline/rebimboka-protos@0.5.0) (2023-07-19)
 
 ### Features
