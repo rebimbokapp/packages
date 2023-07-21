@@ -2,7 +2,9 @@ syntax = "proto2";
 
 package cdn;
 
-service CDNService {
+import "common.proto";
+
+service CdnService {
   rpc UploadImage (UploadImageRequest) returns (UploadImageResponse);
 }
 
@@ -14,8 +16,5 @@ message UploadImageRequest {
 }
 
 message UploadImageResponse {
-  required string name = 1;
-  required string type = 2;
-  required uint32 size = 3;
-  required string url = 4;
+  required common.Image image = 1;
 }
