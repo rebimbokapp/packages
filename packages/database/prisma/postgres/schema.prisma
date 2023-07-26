@@ -86,6 +86,7 @@ model Workshop {
   address_id      String
   address         Address          @relation(fields: [address_id], references: [id])
   bugets          Budget[]
+  solicitations   Solicitation[]
   created_at      DateTime         @default(now())
   updated_at      DateTime         @default(now()) @updatedAt
 
@@ -140,6 +141,8 @@ model Solicitation {
   channel_id     String?
   user_id        String
   user           User                   @relation(fields: [user_id], references: [id])
+  workshop_id    String?
+  workshop       Workshop?              @relation(fields: [workshop_id], references: [id])
   users_reject   User[]                 @relation("rejected_solicitations")
   users_accepted User[]                 @relation("accepted_solicitations")
   users_closed   User[]                 @relation("closed_solicitations")
