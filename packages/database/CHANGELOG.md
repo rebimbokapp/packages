@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.8.0...@hitechline/rebimboka-database@0.9.0) (2023-07-26)
+
+### Features
+
+- create message embeds ([7ec8bb1](https://github.com/hitechline/hitl-rbk-packages/commit/7ec8bb11cd3d545e2f6a6d7d752430e3a09b887c))
+
 # [0.8.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.7.0...@hitechline/rebimboka-database@0.8.0) (2023-07-26)
 
 ### Features
