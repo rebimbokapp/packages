@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.7.0...@hitechline/rebimboka-database@0.8.0) (2023-07-26)
+
+### Features
+
+- add workshop on solicitation ([5af32f4](https://github.com/hitechline/hitl-rbk-packages/commit/5af32f4815f649b2c676d1ab72e89f872a7c9206))
+
 # [0.7.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.6.1...@hitechline/rebimboka-database@0.7.0) (2023-07-19)
 
 ### Features
