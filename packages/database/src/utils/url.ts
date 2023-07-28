@@ -14,22 +14,3 @@ export function createPostgresUrl(
 
   return url;
 }
-
-export function createMongoUrl(
-  host: string,
-  port: number,
-  database: string,
-  username: string,
-  password: string,
-  authSource?: string,
-  directConnection?: boolean,
-): string {
-  const params = new URLSearchParams({
-    authSource: authSource ?? 'admin',
-    directConnection: directConnection?.toString() ?? 'true',
-  }).toString();
-
-  const url = `mongodb://${username}:${password}@${host}:${port.toString()}/${database}?${params}`;
-
-  return url;
-}

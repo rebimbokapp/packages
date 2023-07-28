@@ -92,7 +92,8 @@ model UserOnChannel {
 model Notification {
   id          String    @id @map("_id") @db.String
   title       String
-  action      String
+  category    String
+  action      String?
   description String
   user_id     String
   read_at     DateTime?
