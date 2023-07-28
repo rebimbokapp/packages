@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.9.0...@hitechline/rebimboka-database@0.9.1) (2023-07-28)
+
+### Bug Fixes
+
+- mongo url ([0388f80](https://github.com/hitechline/hitl-rbk-packages/commit/0388f805f5059d1070f3f07c84d323412e797819))
+
 # [0.9.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.8.0...@hitechline/rebimboka-database@0.9.0) (2023-07-26)
 
 ### Features
