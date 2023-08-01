@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-errors@0.6.1...@hitechline/rebimboka-errors@0.7.0) (2023-08-01)
+
+### Features
+
+- update notification protos ([54b727d](https://github.com/hitechline/hitl-rbk-packages/commit/54b727d8ca36cf6591a4221a44e64af84ad7707d))
+
 ## [0.6.1](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-errors@0.6.0...@hitechline/rebimboka-errors@0.6.1) (2023-07-26)
 
 **Note:** Version bump only for package @hitechline/rebimboka-errors
