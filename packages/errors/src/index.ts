@@ -45,3 +45,5 @@ export * from './SocketNotFoundError';
 
 export * from './ImageNotFoundError';
 export * from './ImageTypeNotAllowedError';
+
+export * from './NotificationNotFoundError';

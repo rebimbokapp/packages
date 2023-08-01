@@ -89,16 +89,23 @@ model UserOnChannel {
   @@map("users_channels")
 }
 
+enum NotificationCategory {
+  BUDGET
+  MESSAGE
+  SOLICITATION
+  OFFER
+  AUDIT_LOG
+  SYSTEM
+}
+
 model Notification {
-  id          String    @id @map("_id") @db.String
-  title       String
-  category    String
-  action      String?
-  description String
-  user_id     String
-  read_at     DateTime?
-  created_at  DateTime  @default(now())
-  updated_at  DateTime  @default(now()) @updatedAt
+  id         String               @id @map("_id") @db.String
+  category   NotificationCategory
+  content    String
+  user_id    String?
+  read_at    DateTime?
+  created_at DateTime             @default(now())
+  updated_at DateTime             @default(now()) @updatedAt
 
   @@map("notifications")
 }

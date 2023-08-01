@@ -9,10 +9,9 @@ service NotificationService {
 }
 
 message CreateNotificationRequest {
-  required string title = 1;
-  required string action = 2;
-  required string description = 3;
-  required string user_id = 4;
+  required string category = 1;
+  required string content = 2;
+  optional string user_id = 3;
 }
 
 message CreateNotificationResponse {

@@ -16,10 +16,10 @@ message User {
 
 message Notification {
   required string id = 1;
-  required string title = 2;
-  required string action = 3;
-  required string description = 4;
-  required string user_id = 5;
+  required string category = 2;
+  required string content = 3;
+  optional string user_id = 4;
+  optional string read_at = 5;
   required string created_at = 6;
   required string updated_at = 7;
 }
