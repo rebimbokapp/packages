@@ -1,6 +1,6 @@
 {
   "name": "@hitechline/rebimboka-database",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "license": "UNLICENSED",
   "main": "dist/index.js",
   "module": "dist/index.js",

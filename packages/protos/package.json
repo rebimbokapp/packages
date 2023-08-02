@@ -1,6 +1,6 @@
 {
   "name": "@hitechline/rebimboka-protos",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "license": "UNLICENSED",
   "main": "dist/index.js",
   "types": "typings/index.d.ts",

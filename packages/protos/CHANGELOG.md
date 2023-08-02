@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.7.0...@hitechline/rebimboka-protos@0.8.0) (2023-08-02)
+
+### Features
+
+- add notification action and metadata ([a028ec3](https://github.com/hitechline/hitl-rbk-packages/commit/a028ec3a052d2b878ea1568a092c1692b35441d3))
+
 # [0.7.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-protos@0.6.1...@hitechline/rebimboka-protos@0.7.0) (2023-08-01)
 
 ### Features

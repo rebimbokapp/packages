@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.10.0...@hitechline/rebimboka-database@0.11.0) (2023-08-02)
+
+### Features
+
+- add notification action and metadata ([a028ec3](https://github.com/hitechline/hitl-rbk-packages/commit/a028ec3a052d2b878ea1568a092c1692b35441d3))
+
 # [0.10.0](https://github.com/hitechline/hitl-rbk-packages/compare/@hitechline/rebimboka-database@0.9.1...@hitechline/rebimboka-database@0.10.0) (2023-08-01)
 
 ### Features
