@@ -98,10 +98,16 @@ enum NotificationCategory {
   SYSTEM
 }
 
+enum NotificationAction {
+  LINK
+}
+
 model Notification {
   id         String               @id @map("_id") @db.String
   category   NotificationCategory
+  action     NotificationAction?
   content    String
+  metadata   Json?
   user_id    String?
   read_at    DateTime?
   created_at DateTime             @default(now())
