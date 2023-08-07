@@ -68,13 +68,15 @@ model EmbedField {
 }
 
 model User {
-  id         String          @id @map("_id") @db.String
-  full_name  String
-  avatar     String?
-  messages   Message[]
-  channels   UserOnChannel[]
-  created_at DateTime        @default(now())
-  updated_at DateTime        @default(now()) @updatedAt
+  id                   String                     @id @map("_id") @db.String
+  full_name            String?
+  avatar               String?
+  messages             Message[]
+  channels             UserOnChannel[]
+  notifications_unread UserOnNotificationUnread[]
+  notifications_read   UserOnNotificationRead[]
+  created_at           DateTime                   @default(now())
+  updated_at           DateTime                   @default(now()) @updatedAt
 
   @@map("users")
 }
@@ -103,15 +105,35 @@ enum NotificationAction {
 }
 
 model Notification {
-  id         String               @id @map("_id") @db.String
-  category   NotificationCategory
-  action     NotificationAction?
-  content    String
-  metadata   Json?
-  user_id    String?
-  read_at    DateTime?
-  created_at DateTime             @default(now())
-  updated_at DateTime             @default(now()) @updatedAt
+  id           String                     @id @map("_id") @db.String
+  category     NotificationCategory
+  action       NotificationAction?
+  content      String
+  metadata     Json?
+  users_unread UserOnNotificationUnread[]
+  users_read   UserOnNotificationRead[]
+  created_at   DateTime                   @default(now())
+  updated_at   DateTime                   @default(now()) @updatedAt
 
   @@map("notifications")
+}
+
+model UserOnNotificationUnread {
+  id              String       @id @map("_id") @db.String
+  user_id         String       @db.String
+  user            User         @relation(fields: [user_id], references: [id])
+  notification_id String       @db.String
+  notification    Notification @relation(fields: [notification_id], references: [id])
+
+  @@map("users_notifications_unread")
+}
+
+model UserOnNotificationRead {
+  id              String       @id @map("_id") @db.String
+  user_id         String       @db.String
+  user            User         @relation(fields: [user_id], references: [id])
+  notification_id String       @db.String
+  notification    Notification @relation(fields: [notification_id], references: [id])
+
+  @@map("users_notifications_read")
 }

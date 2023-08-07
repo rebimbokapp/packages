@@ -47,3 +47,5 @@ export * from './ImageNotFoundError';
 export * from './ImageTypeNotAllowedError';
 
 export * from './NotificationNotFoundError';
+export * from './NotificationAlreadyReadError';
+export * from './NotificationAlreadyUnreadError';
