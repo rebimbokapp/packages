@@ -109,11 +109,11 @@ model Budget {
   @@map("budgets")
 }
 
-enum SolicitationStatus {
-  PENDING
-  ACCEPTED
-  CLOSED
-}
+// enum SolicitationStatus {
+//   PENDING
+//   ACCEPTED
+//   CLOSED
+// }
 
 enum SolicitationPieceState {
   NEW
@@ -128,9 +128,34 @@ enum SolicitationVehicle {
   HEAVY_VEHICLES
 }
 
+// @deprecated
+// model Solicitation { 
+//   id             String                 @id
+//   status         SolicitationStatus     @default(PENDING)
+//   piece_state    SolicitationPieceState
+//   vehicle        SolicitationVehicle
+//   brand          String
+//   model          String
+//   year           String
+//   color          String
+//   description    String
+//   channel_id     String?
+//   user_id        String
+//   user           User                   @relation(fields: [user_id], references: [id])
+//   workshop_id    String?
+//   workshop       Workshop?              @relation(fields: [workshop_id], references: [id])
+//   users_reject   User[]                 @relation("rejected_solicitations")
+//   users_accepted User[]                 @relation("accepted_solicitations")
+//   users_closed   User[]                 @relation("closed_solicitations")
+//   budgets        Budget[]
+//   created_at     DateTime               @default(now())
+//   updated_at     DateTime               @default(now()) @updatedAt
+
+//   @@map("solicitations")
+// }
+
 model Solicitation {
   id             String                 @id
-  status         SolicitationStatus     @default(PENDING)
   piece_state    SolicitationPieceState
   vehicle        SolicitationVehicle
   brand          String
