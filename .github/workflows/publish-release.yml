@@ -27,7 +27,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
 
       - name: Install dependencies
-        run: npm install --no-package-lock
+        run: npm install --no-package-lock --force
 
       - name: Set up git user
         uses: fregante/setup-git-user@v1
