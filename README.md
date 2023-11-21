@@ -34,3 +34,5 @@ npm config set @hitechline:registry https://npm.pkg.github.com/
 Para realizar alguma contribuição em alguma biblioteca, você primeiramente precisa instalar às dependências utilizando `npm install`, lembre-se de ter a versão do Node.js superior a 14.
 
 Feito isso basta seguir o passo a passo da documentação da biblioteca escolhida para poder começar fazer alterações.
+
+hitechline sairá de linha.
